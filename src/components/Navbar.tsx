@@ -26,19 +26,19 @@ export default function Navbar() {
         : "backdrop-blur-md bg-cream/60 border-b border-stone-200"
     }`}>
       <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="font-display text-2xl tracking-wide group">
+        <Link href="#" className="font-display text-2xl tracking-wide group">
           <span className="text-stone-900 group-hover:text-gold transition-colors">Catering</span>{" "}
           <span className="text-gold group-hover:scale-110 inline-block transition-transform">Luxe</span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/about" className="hover:text-gold transition-colors relative group">
+          <a href="#about" className="hover:text-gold transition-colors relative group">
             About
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-gold to-yellow-600 group-hover:w-full transition-all"></span>
-          </Link>
-          <Link href="/services" className="hover:text-gold transition-colors relative group">
+          </a>
+          <a href="#services" className="hover:text-gold transition-colors relative group">
             Services
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-gold to-yellow-600 group-hover:w-full transition-all"></span>
-          </Link>
+          </a>
           <div className="relative group" onMouseEnter={() => setMenuOpen(true)} onMouseLeave={() => setMenuOpen(false)}>
             <button className="hover:text-gold transition-colors relative flex items-center gap-1">
               Menu
@@ -47,40 +47,40 @@ export default function Navbar() {
             </button>
             {menuOpen && (
               <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white/95 backdrop-blur-xl border-2 border-stone-200 rounded-2xl shadow-2xl py-2 z-50">
-                <Link href="/menu/wedding" className="block px-6 py-3 hover:bg-gold/10 hover:text-gold transition-colors text-center">
+                <a href="#wedding-menu" className="block px-6 py-3 hover:bg-gold/10 hover:text-gold transition-colors text-center">
                   💍 Wedding Catering
-                </Link>
-                <Link href="/menu/birthday" className="block px-6 py-3 hover:bg-gold/10 hover:text-gold transition-colors text-center">
+                </a>
+                <a href="#birthday-menu" className="block px-6 py-3 hover:bg-gold/10 hover:text-gold transition-colors text-center">
                   🎂 Birthday Catering
-                </Link>
-                <Link href="/menu/corporate" className="block px-6 py-3 hover:bg-gold/10 hover:text-gold transition-colors text-center">
+                </a>
+                <a href="#corporate-menu" className="block px-6 py-3 hover:bg-gold/10 hover:text-gold transition-colors text-center">
                   🏢 Corporate Catering
-                </Link>
-                <Link href="/menu/traditional" className="block px-6 py-3 hover:bg-gold/10 hover:text-gold transition-colors text-center">
+                </a>
+                <a href="#traditional-menu" className="block px-6 py-3 hover:bg-gold/10 hover:text-gold transition-colors text-center">
                   🍴 Traditional Catering
-                </Link>
+                </a>
               </div>
             )}
           </div>
-          <Link href="/specialties" className="hover:text-gold transition-colors relative group">
+          <a href="#specialties" className="hover:text-gold transition-colors relative group">
             Specialties
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-gold to-yellow-600 group-hover:w-full transition-all"></span>
-          </Link>
-          <Link href="/gallery" className="hover:text-gold transition-colors relative group">
+          </a>
+          <a href="#gallery" className="hover:text-gold transition-colors relative group">
             Gallery
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-gold to-yellow-600 group-hover:w-full transition-all"></span>
-          </Link>
-          <Link href="/pricing" className="hover:text-gold transition-colors relative group">
+          </a>
+          <a href="#pricing" className="hover:text-gold transition-colors relative group">
             Pricing
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-gold to-yellow-600 group-hover:w-full transition-all"></span>
-          </Link>
-          <Link href="/testimonials" className="hover:text-gold transition-colors relative group">
+          </a>
+          <a href="#testimonials" className="hover:text-gold transition-colors relative group">
             Testimonials
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-gold to-yellow-600 group-hover:w-full transition-all"></span>
-          </Link>
-          <Link href="/booking" className="px-6 py-3 rounded-full bg-gradient-to-r from-gold to-yellow-600 text-white hover:shadow-xl hover:scale-105 transition-all">
+          </a>
+          <a href="#booking" className="px-6 py-3 rounded-full bg-gradient-to-r from-gold to-yellow-600 text-white hover:shadow-xl hover:scale-105 transition-all">
             Book Now
-          </Link>
+          </a>
           <a href="tel:+1234567890" className="flex items-center gap-2 text-stone-700 hover:text-gold transition-colors">
             <FiPhone className="animate-pulse" /> +1 234 567 890
           </a>
@@ -101,8 +101,8 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-stone-200 shadow-lg" onClick={()=>setOpen(false)}>
           <div className="px-4 py-3 flex flex-col gap-1">
-            <Link href="/about" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>About</Link>
-            <Link href="/services" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Services</Link>
+            <a href="#about" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>About</a>
+            <a href="#services" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Services</a>
             <div>
               <button 
                 className="w-full flex items-center justify-between hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl text-left"
@@ -116,8 +116,8 @@ export default function Navbar() {
               </button>
               {mobileMenuOpen && (
                 <div className="pl-6 pr-2 py-2 flex flex-col gap-1 border-l-2 border-gold/30 ml-4 mt-1">
-                  <Link 
-                    href="/menu/wedding"
+                  <a 
+                    href="#wedding-menu"
                     className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl text-center"
                     onClick={(e) => {
                       e.stopPropagation();
@@ -126,9 +126,9 @@ export default function Navbar() {
                     }}
                   >
                     💍 Wedding Catering
-                  </Link>
-                  <Link 
-                    href="/menu/birthday"
+                  </a>
+                  <a 
+                    href="#birthday-menu"
                     className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl text-center"
                     onClick={(e) => {
                       e.stopPropagation();
@@ -137,9 +137,9 @@ export default function Navbar() {
                     }}
                   >
                     🎂 Birthday Catering
-                  </Link>
-                  <Link 
-                    href="/menu/corporate"
+                  </a>
+                  <a 
+                    href="#corporate-menu"
                     className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl text-center"
                     onClick={(e) => {
                       e.stopPropagation();
@@ -148,9 +148,9 @@ export default function Navbar() {
                     }}
                   >
                     🏢 Corporate Catering
-                  </Link>
-                  <Link 
-                    href="/menu/traditional"
+                  </a>
+                  <a 
+                    href="#traditional-menu"
                     className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl text-center"
                     onClick={(e) => {
                       e.stopPropagation();
@@ -159,17 +159,17 @@ export default function Navbar() {
                     }}
                   >
                     🍴 Traditional Catering
-                  </Link>
+                  </a>
                 </div>
               )}
             </div>
-            <Link href="/specialties" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Specialties</Link>
-            <Link href="/gallery" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Gallery</Link>
-            <Link href="/pricing" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Pricing</Link>
-            <Link href="/testimonials" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Testimonials</Link>
-            <Link href="/booking" className="mt-1 mb-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-gold to-yellow-600 text-white text-center text-sm hover:shadow-lg transition-all" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>
+            <a href="#specialties" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Specialties</a>
+            <a href="#gallery" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Gallery</a>
+            <a href="#pricing" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Pricing</a>
+            <a href="#testimonials" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Testimonials</a>
+            <a href="#booking" className="mt-1 mb-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-gold to-yellow-600 text-white text-center text-sm hover:shadow-lg transition-all" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>
               Book Now
-            </Link>
+            </a>
           </div>
         </div>
       )}
