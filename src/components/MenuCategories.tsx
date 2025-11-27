@@ -37,15 +37,14 @@ const menuCategories = [
 
 export default function MenuCategories() {
   return (
-    <section id="menu-categories" className="mx-auto max-w-7xl px-4 py-12 md:py-20">
+    <section id="menu-categories" className="mx-auto max-w-7xl px-4 py-8 md:py-12">
       <div className="mb-6 md:mb-8 text-center">
         <h2 className="font-display text-2xl md:text-5xl mb-2 md:mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">
           Menu Categories
         </h2>
-        <p className="text-stone-600 text-xs md:text-lg">Specialized menus crafted for every celebration</p>
       </div>
       
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-8 justify-center mx-auto max-w-4xl">
         {menuCategories.map((category, i) => (
           <div 
             key={category.id} 
@@ -79,7 +78,7 @@ export default function MenuCategories() {
               </div>
               
               <a 
-                href="#booking" 
+                href="/booking" 
                 className="mt-6 block w-full text-center px-6 py-3 rounded-full border-2 border-gold text-gold font-medium hover:bg-gold hover:text-white transition-all"
               >
                 Request Menu

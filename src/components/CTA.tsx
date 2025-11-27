@@ -11,7 +11,7 @@ export default function CTA() {
             Let our culinary experts craft a bespoke menu that will leave your guests talking for years to come.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2 md:pt-4">
-            <a href="#booking" className="px-5 sm:px-10 py-2 sm:py-5 text-center rounded-full bg-white text-gold font-bold text-xs sm:text-lg hover:bg-cream hover:scale-105 transition-all shadow-xl">
+            <a href="/booking" className="px-5 sm:px-10 py-2 sm:py-5 text-center rounded-full bg-white text-gold font-bold text-xs sm:text-lg hover:bg-cream hover:scale-105 transition-all shadow-xl">
               Book Consultation
             </a>
             <a href="tel:+1234567890" className="px-5 sm:px-10 py-2 sm:py-5 text-center rounded-full border-2 border-white text-white font-bold text-xs sm:text-lg hover:bg-white/10 transition-all">

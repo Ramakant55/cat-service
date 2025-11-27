@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="mx-auto max-w-7xl px-4 py-8 md:py-16">
+    <section id="about" className="mx-auto max-w-7xl px-4 py-6 md:py-10">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="relative h-[400px] md:h-[600px] group">
           <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-pastelGreen/20 rounded-3xl blur-xl"></div>
@@ -37,8 +37,8 @@ export default function About() {
               <div className="text-stone-600 text-sm mt-2">Awards Won</div>
             </div>
           </div>
-          <div className="flex gap-4 pt-4">
-            <a href="#menu" className="px-4 sm:px-8 py-2 sm:py-4 text-center rounded-full bg-gradient-to-r from-gold to-yellow-600 text-white font-medium text-xs sm:text-base hover:shadow-lg hover:scale-105 transition-all">
+          <div className="flex justify-center pt-4">
+            <a href="/" className="px-4 sm:px-8 py-2 sm:py-4 text-center rounded-full bg-gradient-to-r from-gold to-yellow-600 text-white font-medium text-xs sm:text-base hover:shadow-lg hover:scale-105 transition-all">
               View Our Story
             </a>
           </div>

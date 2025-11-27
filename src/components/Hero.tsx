@@ -38,10 +38,10 @@ export default function Hero() {
             Full-service catering for weddings, corporate events, and private dining. Premium ingredients, bespoke menus, impeccable service.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 animate-fade-in-up" style={{ animationDelay: "2.5s" }}>
-            <a href="#booking" className="px-4 sm:px-8 py-2 sm:py-4 text-center rounded-full bg-gradient-to-r from-gold to-yellow-600 text-white font-medium text-xs sm:text-base hover:shadow-lg hover:scale-105 transition-all">
+            <a href="/booking" className="px-4 sm:px-8 py-2 sm:py-4 text-center rounded-full bg-gradient-to-r from-gold to-yellow-600 text-white font-medium text-xs sm:text-base hover:shadow-lg hover:scale-105 transition-all">
               Book a Tasting
             </a>
-            <a href="#menu" className="px-4 sm:px-8 py-2 sm:py-4 text-center rounded-full border-2 border-stone-300 hover:bg-stone-50 hover:border-gold transition-all font-medium text-xs sm:text-base">
+            <a href="/" className="px-4 sm:px-8 py-2 sm:py-4 text-center rounded-full border-2 border-stone-300 hover:bg-stone-50 hover:border-gold transition-all font-medium text-xs sm:text-base">
               Explore Menu
             </a>
           </div>

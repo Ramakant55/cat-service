@@ -51,7 +51,7 @@ export default function Pricing() {
                 </li>
               ))}
             </ul>
-            <a href="#booking" className={`mt-8 block text-center px-6 py-3 rounded-full font-medium transition-all ${p.highlight ? "bg-gradient-to-r from-gold to-yellow-600 text-white hover:shadow-lg" : "border-2 border-stone-300 hover:border-gold hover:bg-stone-50"}`}>
+            <a href="/booking" className={`mt-8 block text-center px-6 py-3 rounded-full font-medium transition-all ${p.highlight ? "bg-gradient-to-r from-gold to-yellow-600 text-white hover:shadow-lg" : "border-2 border-stone-300 hover:border-gold hover:bg-stone-50"}`}>
               Choose {p.name}
             </a>
           </div>

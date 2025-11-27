@@ -29,7 +29,7 @@ const specialties = [
 
 export default function Specialties() {
   return (
-    <section id="specialties" className="mx-auto max-w-7xl px-4 py-12 md:py-20">
+    <section id="specialties" className="mx-auto max-w-7xl px-4 py-8 md:py-12">
       <div className="mb-6 md:mb-8 text-center">
         <h2 className="font-display text-2xl md:text-5xl mb-2 md:mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">
           Chef's Signature Dishes
