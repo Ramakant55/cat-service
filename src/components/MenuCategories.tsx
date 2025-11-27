@@ -44,7 +44,7 @@ export default function MenuCategories() {
         </h2>
       </div>
       
-      <div className="grid md:grid-cols-2 gap-8 justify-center mx-auto max-w-4xl">
+      <div className="grid md:grid-cols-2 gap-8 justify-center mx-auto max-w-8xl">
         {menuCategories.map((category, i) => (
           <div 
             key={category.id} 
