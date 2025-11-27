@@ -30,11 +30,11 @@ const specialties = [
 export default function Specialties() {
   return (
     <section id="specialties" className="mx-auto max-w-7xl px-4 py-12 md:py-20">
-      <div className="mb-8 md:mb-12 text-center">
-        <h2 className="font-display text-4xl md:text-5xl mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">
+      <div className="mb-6 md:mb-8 text-center">
+        <h2 className="font-display text-2xl md:text-5xl mb-2 md:mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">
           Chef's Signature Dishes
         </h2>
-        <p className="text-stone-600 text-lg">Handcrafted by our award-winning culinary team</p>
+        <p className="text-stone-600 text-xs md:text-lg">Handcrafted by our award-winning culinary team</p>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {specialties.map((dish, i) => (
@@ -53,7 +53,7 @@ export default function Specialties() {
             </div>
             <div className="p-6">
               <h3 className="font-display text-xl text-stone-900">{dish.name}</h3>
-              <p className="text-stone-600 text-sm mt-1">by {dish.chef}</p>
+              <p className="text-stone-600 text-xs mt-1">by {dish.chef}</p>
               <button className="mt-4 w-full px-6 py-3 rounded-full border-2 border-gold text-gold font-medium hover:bg-gold hover:text-white transition-all">
                 Add to Menu
               </button>

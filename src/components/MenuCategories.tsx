@@ -38,11 +38,11 @@ const menuCategories = [
 export default function MenuCategories() {
   return (
     <section id="menu-categories" className="mx-auto max-w-7xl px-4 py-12 md:py-20">
-      <div className="mb-8 md:mb-12 text-center">
-        <h2 className="font-display text-4xl md:text-5xl mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">
+      <div className="mb-6 md:mb-8 text-center">
+        <h2 className="font-display text-2xl md:text-5xl mb-2 md:mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">
           Menu Categories
         </h2>
-        <p className="text-stone-600 text-lg">Specialized menus crafted for every celebration</p>
+        <p className="text-stone-600 text-xs md:text-lg">Specialized menus crafted for every celebration</p>
       </div>
       
       <div className="grid md:grid-cols-2 gap-8">
@@ -62,7 +62,7 @@ export default function MenuCategories() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
               <div className="absolute bottom-4 left-6 right-6">
                 <div className="text-5xl mb-2">{category.icon}</div>
-                <h3 className="font-display text-3xl text-white">{category.title}</h3>
+                <h3 className="font-display text-2xl text-white">{category.title}</h3>
               </div>
             </div>
             
@@ -71,7 +71,7 @@ export default function MenuCategories() {
               
               <div className="grid grid-cols-2 gap-3">
                 {category.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-sm text-stone-700">
+                  <div key={idx} className="flex items-center gap-2 text-xs text-stone-700">
                     <span className="text-gold">✓</span>
                     <span>{feature}</span>
                   </div>

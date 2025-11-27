@@ -30,11 +30,11 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="mx-auto max-w-7xl px-4 py-12 md:py-20 bg-gradient-to-b from-cream to-white rounded-3xl">
-      <div className="mb-8 md:mb-12 text-center">
-        <h2 className="font-display text-4xl md:text-5xl mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">
+      <div className="mb-6 md:mb-8 text-center">
+        <h2 className="font-display text-2xl md:text-5xl mb-2 md:mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">
           Our Services
         </h2>
-        <p className="text-stone-600 text-lg">Exceptional catering for every occasion</p>
+        <p className="text-stone-600 text-xs md:text-lg">Exceptional catering for every occasion</p>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((s, i) => (

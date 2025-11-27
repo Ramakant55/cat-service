@@ -12,9 +12,9 @@ const images = [
 export default function Gallery() {
   return (
     <section id="gallery" className="mx-auto max-w-7xl px-4">
-      <div className="mb-8 md:mb-12 text-center">
-        <h2 className="font-display text-4xl md:text-5xl mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">Gallery</h2>
-        <p className="text-stone-600 text-lg">A glimpse into our culinary artistry</p>
+      <div className="mb-6 md:mb-8 text-center">
+        <h2 className="font-display text-2xl md:text-5xl mb-2 md:mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">Gallery</h2>
+        <p className="text-stone-600 text-xs md:text-lg">A glimpse into our culinary artistry</p>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
         {images.map((src, i) => (

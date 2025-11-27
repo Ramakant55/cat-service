@@ -26,11 +26,11 @@ const steps = [
 export default function Process() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-12 md:py-20 bg-gradient-to-br from-stone-50 to-cream rounded-3xl">
-      <div className="mb-8 md:mb-12 text-center">
-        <h2 className="font-display text-4xl md:text-5xl mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">
+      <div className="mb-6 md:mb-8 text-center">
+        <h2 className="font-display text-2xl md:text-5xl mb-2 md:mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">
           How It Works
         </h2>
-        <p className="text-stone-600 text-lg">Four simple steps to an unforgettable event</p>
+        <p className="text-stone-600 text-xs md:text-lg">Four simple steps to an unforgettable event</p>
       </div>
       <div className="grid md:grid-cols-4 gap-8">
         {steps.map((step, i) => (

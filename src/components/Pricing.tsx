@@ -28,15 +28,15 @@ const plans = [
 export default function Pricing() {
   return (
     <section id="pricing" className="mx-auto max-w-7xl px-4">
-      <div className="mb-8 md:mb-12 text-center">
-        <h2 className="font-display text-4xl md:text-5xl mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">Pricing</h2>
-        <p className="text-stone-600 text-lg">Transparent packages tailored to your event</p>
+      <div className="mb-6 md:mb-8 text-center">
+        <h2 className="font-display text-2xl md:text-5xl mb-2 md:mb-4 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">Pricing</h2>
+        <p className="text-stone-600 text-xs md:text-lg">Transparent packages tailored to your event</p>
       </div>
       <div className="grid md:grid-cols-3 gap-8">
         {plans.map((p) => (
           <div key={p.name} className={`relative rounded-3xl border-2 p-8 bg-gradient-to-br ${p.gradient} ${p.highlight ? "border-gold shadow-2xl scale-105" : "border-stone-200 hover:shadow-xl"} transition-all duration-300 hover:-translate-y-1`}>
             {p.highlight && (
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-gold to-yellow-600 text-white text-sm font-medium rounded-full shadow-lg">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-gold to-yellow-600 text-white text-xs font-medium rounded-full shadow-lg">
                 {p.badge}
               </div>
             )}

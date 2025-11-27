@@ -17,10 +17,10 @@ export default function About() {
           <div className="inline-block px-4 py-2 bg-gradient-to-r from-gold/20 to-pastelGreen/30 rounded-full text-sm font-medium text-stone-700">
             ✨ Since 2010
           </div>
-          <h2 className="font-display text-5xl md:text-6xl bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">
+          <h2 className="font-display text-2xl md:text-6xl mb-2 md:mb-6 bg-gradient-to-r from-stone-900 to-stone-600 bg-clip-text text-transparent">
             Crafting Memories Through Culinary Excellence
           </h2>
-          <p className="text-stone-600 text-lg leading-relaxed">
+          <p className="text-stone-600 text-xs md:text-lg leading-relaxed mb-4 md:mb-6">
             With over a decade of experience, we've perfected the art of creating unforgettable dining experiences. Our award-winning chefs combine traditional techniques with innovative flavors to deliver exceptional cuisine.
           </p>
           <div className="grid grid-cols-3 gap-6 pt-6">
@@ -38,7 +38,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex gap-4 pt-4">
-            <a href="#menu" className="px-8 py-4 rounded-full bg-gradient-to-r from-gold to-yellow-600 text-white font-medium hover:shadow-lg hover:scale-105 transition-all">
+            <a href="#menu" className="px-4 sm:px-8 py-2 sm:py-4 text-center rounded-full bg-gradient-to-r from-gold to-yellow-600 text-white font-medium text-xs sm:text-base hover:shadow-lg hover:scale-105 transition-all">
               View Our Story
             </a>
           </div>
