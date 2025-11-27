@@ -3,10 +3,18 @@ import Link from "next/link";
 import { FiPhone, FiMenu, FiChevronDown } from "react-icons/fi";
 import { useState, useEffect } from "react";
 
+const menuItems = [
+  { id: "wedding-menu", name: "💍 Wedding Catering" },
+  { id: "birthday-menu", name: "🎂 Birthday Catering" },
+  { id: "corporate-menu", name: "🏢 Corporate Catering" },
+  { id: "traditional-menu", name: "🍛 Traditional Catering" }
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,21 +90,59 @@ export default function Navbar() {
             <FiPhone className="animate-pulse" /> +1 234 567 890
           </a>
         </nav>
-        <button className="md:hidden p-3 rounded-full border-2 border-stone-300 hover:border-gold hover:bg-gold/10 transition-all" onClick={()=>setOpen(v=>!v)}>
-          <FiMenu className="text-lg" />
+        {/* Mobile Floating Menu Button */}
+        <button 
+          className="md:hidden p-2 rounded-full bg-gradient-to-br from-gold via-yellow-500 to-yellow-600 shadow-lg hover:shadow-gold/50 active:scale-95 transition-all duration-300 flex items-center justify-center" 
+          onClick={()=>setOpen(v=>!v)}
+        >
+          <div className="relative w-5 h-5 flex flex-col justify-between">
+            <span className={`block h-0.5 w-full bg-white rounded-full transition-all duration-300 ${open ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+            <span className={`block h-0.5 w-full bg-white rounded-full transition-all duration-300 ${open ? 'opacity-0' : ''}`}></span>
+            <span className={`block h-0.5 w-full bg-white rounded-full transition-all duration-300 ${open ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+          </div>
         </button>
       </div>
+      {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden border-t border-stone-200 px-4 pb-4 pt-4 backdrop-blur-xl bg-white/90">
-          <div className="flex flex-col gap-4 text-sm">
-            <a href="#about" className="hover:text-gold transition-colors py-2">About</a>
-            <a href="#services" className="hover:text-gold transition-colors py-2">Services</a>
-            <a href="#menu" className="hover:text-gold transition-colors py-2">Menu</a>
-            <a href="#specialties" className="hover:text-gold transition-colors py-2">Specialties</a>
-            <a href="#gallery" className="hover:text-gold transition-colors py-2">Gallery</a>
-            <a href="#pricing" className="hover:text-gold transition-colors py-2">Pricing</a>
-            <a href="#testimonials" className="hover:text-gold transition-colors py-2">Testimonials</a>
-            <a href="#booking" className="px-4 py-3 rounded-full bg-gradient-to-r from-gold to-yellow-600 text-white text-center hover:shadow-lg transition-all">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-stone-200 shadow-lg" onClick={()=>setOpen(false)}>
+          <div className="px-4 py-3 flex flex-col gap-1">
+            <a href="#about" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>About</a>
+            <a href="#services" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Services</a>
+            <div>
+              <button 
+                className="w-full flex items-center justify-between hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl text-left"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setMobileMenuOpen(!mobileMenuOpen);
+                }}
+              >
+                <span>Menu</span>
+                <FiChevronDown className={`transition-transform ${mobileMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileMenuOpen && (
+                <div className="pl-6 pr-2 py-2 flex flex-col gap-1 border-l-2 border-gold/30 ml-4 mt-1">
+                  {menuItems.map((item) => (
+                    <a 
+                      key={item.id}
+                      href={`#${item.id}`}
+                      className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setOpen(false);
+                        setMobileMenuOpen(false);
+                      }}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+            <a href="#specialties" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Specialties</a>
+            <a href="#gallery" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Gallery</a>
+            <a href="#pricing" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Pricing</a>
+            <a href="#testimonials" className="hover:text-gold transition-colors py-2 px-4 hover:bg-gold/10 rounded-xl" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>Testimonials</a>
+            <a href="#booking" className="mt-1 mb-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-gold to-yellow-600 text-white text-center text-sm hover:shadow-lg transition-all" onClick={(e)=>{e.stopPropagation(); setOpen(false);}}>
               Book Now
             </a>
           </div>
